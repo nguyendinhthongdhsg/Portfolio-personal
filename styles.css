@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    --height-header: 200px;
+    --width-page: 60vw;
+    --height-page: calc(var(--width-page) * 1.4);
+    --left-background-color: #292929;
+    --left-color: #ddd;
+    --left-width: 36%;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+
+@media (max-width: 1000px) {
+    * {
+        --width-page: 100vw;
+    }
+}   
+
+html {
+    background-color: #eee;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    width: var(--width-page);
+    margin: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.header {
+    height: var(--height-header);
+}
+
+.header-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-img {
+    height: 100%;
+    background-color: var(--left-background-color);
+    width: var(--left-width);
+    text-align: center;
+    padding: 20px;
+}
+
+.header-img > img {
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.header-headding {
+    padding: 20px;
+}
+
+.main {
+    display: flex;
+}
+
+.main-left {
+    width: var(--left-width);
+    background-color: var(--left-background-color);
+    color: var(--left-color);
+}
+
+.main-left > div {
+    padding: 20px 20px 10px;
+}
+
+.main-left > div > h3 {
+    margin-bottom: 8px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.main-certificate-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.main-right {
+    width: calc(100% - var(--left-width));
+}
+
+.main-right > div {
+    padding: 20px 20px 10px;
+}
+
+.main-right > div > div:first-child {
+    display: flex;
+    align-items: center;
+    background-color: var(--left-background-color);
+    width: fit-content;
+    padding-right: 10px;
+    border-radius: 40px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.main-right > div > div:first-child > i {
+    background-color: #017acc;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
